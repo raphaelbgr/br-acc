@@ -157,8 +157,16 @@ def run(
             history=history,
         )
 
-        if streaming and hasattr(pipeline, "run_streaming"):
-            pipeline.run_streaming(start_phase=start_phase)
+        if streaming:
+            if hasattr(pipeline, "run_streaming"):
+                pipeline.run_streaming(start_phase=start_phase)
+            else:
+                logging.getLogger(__name__).warning(
+                    "[%s] --streaming requested but this pipeline does not implement "
+                    "run_streaming(); falling back to standard run()",
+                    source,
+                )
+                pipeline.run()
         else:
             pipeline.run()
 
