@@ -100,7 +100,13 @@ class CagedPipeline(Pipeline):
             logger.warning("No caged_*.csv files found in %s", caged_dir)
 
     def transform(self) -> None:
-        pass  # Transform happens per chunk in load()
+        """No-op at the pipeline level.
+
+        CAGED data is too large to hold in memory between phases.
+        Transformation is applied per-chunk inside ``load()`` via
+        ``_transform_chunk()``, which converts raw CSV rows into
+        aggregate LaborStats records before each Neo4j batch write.
+        """
 
     def _transform_chunk(self, df: pd.DataFrame) -> list[dict[str, Any]]:
         """Transform a DataFrame chunk into aggregate LaborStats rows."""
