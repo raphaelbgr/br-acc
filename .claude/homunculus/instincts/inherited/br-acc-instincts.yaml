@@ -1,0 +1,279 @@
+# Instincts generated from https://github.com/raphaelbgr/br-acc
+# Generated: 2026-05-18T20:10:49.430Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: br-acc-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/raphaelbgr/br-acc
+---
+
+# Br Acc Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: fix, docs
+
+## Evidence
+
+- 2 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix: add version field to root health endpoint and improve ETL diagnostics, docs: add ARCHITECTURE.md, CHANGELOG.md, and BMAD v6 docs
+
+---
+id: br-acc-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/raphaelbgr/br-acc
+---
+
+# Br Acc Commit Length
+
+## Action
+
+Write moderate-length commit messages (~66 characters)
+
+## Evidence
+
+- Average commit message length: 66 chars
+- Based on 2 commits
+
+---
+id: br-acc-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/raphaelbgr/br-acc
+---
+
+# Br Acc Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: br-acc-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/raphaelbgr/br-acc
+---
+
+# Br Acc Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: br-acc-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/raphaelbgr/br-acc
+---
+
+# Br Acc Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: br-acc-instinct-naming-files
+trigger: "When creating or renaming a file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Naming Files
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: br-acc-instinct-naming-functions
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Naming Functions
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: br-acc-instinct-naming-classes
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Naming Classes
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: br-acc-instinct-naming-constants
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Naming Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: br-acc-instinct-import-style
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: br-acc-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: br-acc-instinct-git-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Git Commit Prefix
+
+## Action
+
+Start the commit message with a conventional prefix such as 'fix' or 'docs'
+
+## Evidence
+
+- Seen in commit: fix: add version field to root health endpoint and improve ETL diagnostics
+- Seen in commit: docs: add ARCHITECTURE.md, CHANGELOG.md, and BMAD v6 docs
+
+---
+id: br-acc-instinct-git-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 66 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 66
+
+---
+id: br-acc-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.6
+domain: testing
+source: repo-analysis
+source_repo: raphaelbgr/br-acc
+---
+
+# Br Acc Instinct Test Location
+
+## Action
+
+Place tests in the same folder as the code they test or in a mixed location
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: mixed
+
